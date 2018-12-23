@@ -1,0 +1,38 @@
+[
+  {
+    "Type": "Prescription",
+    "Date": "",
+    "Problems Identified": [],
+    "Patient Details": {
+      "Id": "ASDFGF2343245",
+      "Name": "",
+      "Age": 45
+    },
+    "Doctor": "",
+    "Img": ""
+  },
+  {
+    "Type": "Prescription",
+    "Date": "",
+    "Problems Identified": [],
+    "Patient Details": {
+      "Id": "ASDFGF2343245",
+      "Name": "",
+      "Age": 45
+    },
+    "Doctor": "",
+    "Img": ""
+  },
+  {
+    "Type": "Prescription",
+    "Date": "",
+    "Problems Identified": [],
+    "Patient Details": {
+      "Id": "ASDFGF2343245",
+      "Name": "",
+      "Age": 45
+    },
+    "Doctor": "",
+    "Img": ""
+  }
+]

@@ -1,0 +1,21 @@
+.RecordFilter {
+  width: 100vw;
+  height: 50px;
+}
+
+.RecordFilter ul {
+  margin: 0;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.RecordFilter ul li {
+  list-style-type: none;
+  font-size: 1.2rem;
+  flex: 1 1 15vw;
+  background-color: #2981bb;
+  color: white;
+  margin: 0 0.5rem;
+  border-radius: 50px;
+}
