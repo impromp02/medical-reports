@@ -1,0 +1,39 @@
+.Container {
+  margin: 5px 0;
+}
+
+.Span {
+  text-align: left;
+  padding: 0 5px;
+  font-size: 1.2rem;
+}
+
+.Span:focus {
+  border: 1px solid #2981bb;
+}
+
+.name {
+  font-size: 1.2rem; 
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.id {
+  font-size: .8rem;
+  color: rgb(85, 84, 84);
+}
+
+.problem {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #dc4636
+}
+
+.doctor {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.date {
+  font-size: 1rem;
+}

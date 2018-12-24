@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import Header from './Header/Header';
-import Record from './Record/Record';
-import './App.css';
+import RecordData from './Record/RecordData';
+import styles from './App.module.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div>
         <Header/>
-        <Record/>
+        <RecordData/>
       </div>
     );
   }
