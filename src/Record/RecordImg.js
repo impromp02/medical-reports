@@ -4,8 +4,7 @@ import styles from './RecordImg.module.css';
 
 const RecordImg = (props) => (
   <div className={styles.RecordImg}>
-    <img src={img} alt="prescription"/>
-    <div>Prescription</div>
+    <img src={props.photo} alt={props.text}/>
   </div>
 );
 

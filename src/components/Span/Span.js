@@ -2,21 +2,24 @@ import React from 'react';
 import styles from './Span.module.css';
 
 const icon = {
+  id: 'fas fa-user-circle',
+  type: 'fas fa-prescription',
   name: 'fas fa-user',
-  problem: 'fas fa-diagnoses',
+  age: 'fas fa-heart',
+  problem: 'fas fa-exclamation-circle',
   doctor: 'fas fa-user-md',
   date: 'fas fa-calendar-alt'
 };
 
 const Span = (props) => (
-  <div className={styles.Container}>
-    <span className={styles.Span}><i className={icon[props.type]}></i></span>
+  <div className={styles.SpanContainer}>
+    <span className={styles.Span}><i className={icon[props.field]}></i></span>
     <span
-      name={props.type} 
-      className={`${styles.Span} ${styles[props.type]}`} 
+      name={props.field} 
+      className={`${styles.Span} ${styles[props.field]}`} 
       contentEditable
       onBlur={props.onChangeHandler}>
-      {props.text}{console.log(`${styles.Span} ${props.type}`)}
+      {typeof props.value == "object" ? props.value.join(', '): props.value}
     </span>
   </div>
   

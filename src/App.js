@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header/Header';
-import SingleRecord from './Record/SingleRecord';
+import AllRecords from './Record/AllRecords';
 import styles from './App.module.css';
 
 class App extends Component {
@@ -9,8 +9,7 @@ class App extends Component {
       <div>
         <Header/>
         <div className={styles.Records}>
-          <SingleRecord/>
-          <SingleRecord/>
+          <AllRecords/>
         </div>
       </div>
     );

@@ -4,11 +4,15 @@ import styles from './RecordData.module.css';
 
 class RecordData extends Component {
   state = {
-    id: null,
-    name: null,
-    problem: [],
-    doctor: null,
-    date: Date.now()
+    type: this.props.type,
+    patient: {
+      id: this.props.patient.id,
+      name: this.props.patient.name,
+      age: this.props.patient.age
+    },
+    problem: [...this.props.problem],
+    doctor: this.props.doctor,
+    date: this.props.date
   };
 
   onBlurHandler = (event) => {
@@ -27,14 +31,20 @@ class RecordData extends Component {
   }
 
   render() {
+    let elements = [];
+    for(let prop in this.state) {
+      if(prop === "patient") {
+        for(let key in this.state.patient) {
+          elements.push(<Span field={key} value={this.state[prop][key]}/>);
+        }
+      } else {
+        elements.push(<Span field={prop} value={this.state[prop]}/>);
+      }
+    }
+
     return (
       <div className={styles.RecordData}>
-        <Span type="id" text="Ramesh" onBlurHandler={this.onBlurHandler}/>
-        <Span type="name" text="Ramesh" onBlurHandler={this.onBlurHandler}/>
-        <Span type="problem" text="Ramesh" onBlurHandler={this.onBlurHandler}/>
-        <Span type="doctor" text="Ramesh" onBlurHandler={this.onBlurHandler}/>
-        <Span type="date" text="Ramesh" onBlurHandler={this.onBlurHandler}/>
-        <button><i class="fas fa-plus-circle"></i></button>
+        {elements}
       </div>
     );
   }

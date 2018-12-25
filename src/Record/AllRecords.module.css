@@ -1,5 +1,5 @@
 .Card {
-  max-width: calc(50% - 20px);
+  flex: 0 1 430px;
   margin: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   display: flex;
