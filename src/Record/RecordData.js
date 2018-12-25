@@ -11,7 +11,7 @@ class RecordData extends Component {
     date: Date.now()
   };
 
-  onFocusHandler = (event) => {
+  onBlurHandler = (event) => {
     let fieldVal = event.target.innerHTML;
     let fieldId = event.target.getAttribute('name');
 
@@ -29,11 +29,12 @@ class RecordData extends Component {
   render() {
     return (
       <div className={styles.RecordData}>
-        <Span type="id" text="Ramesh" onFocusHandler={this.onFocusHandler}/>
-        <Span type="name" text="Ramesh" onFocusHandler={this.onFocusHandler}/>
-        <Span type="problem" text="Ramesh" onFocusHandler={this.onFocusHandler}/>
-        <Span type="doctor" text="Ramesh" onFocusHandler={this.onFocusHandler}/>
-        <Span type="date" text="Ramesh" onFocusHandler={this.onFocusHandler}/>
+        <Span type="id" text="Ramesh" onBlurHandler={this.onBlurHandler}/>
+        <Span type="name" text="Ramesh" onBlurHandler={this.onBlurHandler}/>
+        <Span type="problem" text="Ramesh" onBlurHandler={this.onBlurHandler}/>
+        <Span type="doctor" text="Ramesh" onBlurHandler={this.onBlurHandler}/>
+        <Span type="date" text="Ramesh" onBlurHandler={this.onBlurHandler}/>
+        <button><i class="fas fa-plus-circle"></i></button>
       </div>
     );
   }

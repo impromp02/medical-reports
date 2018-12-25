@@ -15,7 +15,7 @@ const Span = (props) => (
       name={props.type} 
       className={`${styles.Span} ${styles[props.type]}`} 
       contentEditable
-      onFocus={props.onFocusHandler}>
+      onBlur={props.onChangeHandler}>
       {props.text}{console.log(`${styles.Span} ${props.type}`)}
     </span>
   </div>

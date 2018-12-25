@@ -11,6 +11,10 @@
   overflow: hidden;
 }
 
+.Head img {
+  max-width: 100%;
+}
+
 .Title {
   letter-spacing: -.5px;
   font-family: 'Roboto', sans-serif;

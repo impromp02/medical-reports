@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header/Header';
-import RecordData from './Record/RecordData';
+import SingleRecord from './Record/SingleRecord';
 import styles from './App.module.css';
 
 class App extends Component {
@@ -8,7 +8,10 @@ class App extends Component {
     return (
       <div>
         <Header/>
-        <RecordData/>
+        <div className={styles.Records}>
+          <SingleRecord/>
+          <SingleRecord/>
+        </div>
       </div>
     );
   }
