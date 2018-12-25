@@ -3,6 +3,8 @@ import Span from '../components/Span/Span.js';
 import styles from './RecordData.module.css';
 
 class RecordData extends Component {
+  //state is not chnaging if new props required for filter. That's why the image is changing but not the 
+  // texts in the RecordData component
   state = {
     type: this.props.type,
     patient: {
@@ -12,7 +14,8 @@ class RecordData extends Component {
     },
     problem: [...this.props.problem],
     doctor: this.props.doctor,
-    date: this.props.date
+    date: this.props.date,
+    isEditor: false
   };
 
   onBlurHandler = (event) => {
@@ -30,6 +33,12 @@ class RecordData extends Component {
     }
   }
 
+  onButtonClick = () => {
+    this.setState({
+      isEditor: true
+    });
+  };
+
   render() {
     let elements = [];
     for(let prop in this.state) {
@@ -45,6 +54,7 @@ class RecordData extends Component {
     return (
       <div className={styles.RecordData}>
         {elements}
+        <button onClick={this.onButtonClick}><i class="fas fa-plus-circle"></i></button>
       </div>
     );
   }

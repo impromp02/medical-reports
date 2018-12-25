@@ -3,6 +3,7 @@
   padding: .5rem;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .RecordData button {
