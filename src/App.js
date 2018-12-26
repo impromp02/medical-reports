@@ -25,7 +25,6 @@ class App extends Component {
       <div>
         <Header 
           isFilter={this.state.isFilter}
-          filter={this.state.filter} 
           onFilterClickHandler={this.onFilterClickHandler} 
           onDropClickHandler={this.onDropClickHandler} />
         <div className={styles.Records}>

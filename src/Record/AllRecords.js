@@ -10,13 +10,12 @@ const AllRecords = (props) => {
     if(props.filter === "All") return true;
     return record.type === props.filter
   });
-  //console.log(filteredRecords);
   return filteredRecords.map(record => {
-    return <div className={styles.Card}>
+    return <div key={Math.random()*1000} className={styles.Card}>
       <RecordImg photo={record.img} text={record.type}/>
       <RecordData {...record}/>
     </div>;
   });
-  };
+};
 
 export default AllRecords;

@@ -3,7 +3,7 @@ import styles from './Editor.module.css';
 
 const Editor = () => (
   <div className={styles.Editor}>
-    <form>
+    <form className={styles.Form}>
       <div>
         <label htmlFor="problems">Problem</label>
         <input type="text"/>

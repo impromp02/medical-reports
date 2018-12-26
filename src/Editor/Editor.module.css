@@ -1,7 +1,18 @@
 .Editor {
-  width: 80vw;
+  width: 90vw;
   height: 80vh;
   position: fixed;
+  z-index: 999;
   top: 10vh;
-  left: 10vw;
+  left: 3vw;
+  padding: 1rem;
+  background-color: rgba(41, 129, 187, 0.8);
+}
+
+.Form {
+  width: calc(50% - 2rem);
+  min-height: 100%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

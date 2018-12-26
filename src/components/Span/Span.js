@@ -15,14 +15,14 @@ const Span = (props) => (
   <div className={styles.SpanContainer}>
     <span className={styles.Span}><i className={icon[props.field]}></i></span>
     <span
-      name={props.field} 
+      ident={props.field} 
       className={`${styles.Span} ${styles[props.field]}`} 
       contentEditable
-      onBlur={props.onChangeHandler}>
+      suppressContentEditableWarning="true"
+      onBlur={props.onBlurHandler}>
       {typeof props.value == "object" ? props.value.join(', '): props.value}
     </span>
   </div>
-  
 );
 
 export default Span;

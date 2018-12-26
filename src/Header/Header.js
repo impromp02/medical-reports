@@ -14,7 +14,7 @@ const Header = (props) => {
         {props.isFilter ? <RecordFilter onClickHandler={props.onFilterClickHandler} /> : null}
       </div>
       <div onClick={props.onDropClickHandler} className={styles.Drop}>
-        {props.isFilter ? <i class="fas fa-chevron-up"></i> :<i className="fas fa-chevron-down"></i>}
+        {props.isFilter ? <i className="fas fa-chevron-up"></i> :<i className="fas fa-chevron-down"></i>}
       </div>
     </header>
   );
