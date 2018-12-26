@@ -4,8 +4,6 @@ import Editor from '../Editor/Editor.js';
 import styles from './RecordData.module.css';
 
 class RecordData extends Component {
-  //state is not chnaging if new props required for filter. That's why the image is changing but not the 
-  // texts in the RecordData component
   state = {
     type: this.props.type,
     id: this.props.patient.id,
@@ -14,6 +12,7 @@ class RecordData extends Component {
     problem: [...this.props.problem],
     doctor: this.props.doctor,
     date: this.props.date,
+    isEditor: false
   };
 
   static getDerivedStateFromProps(props, state) {
@@ -43,11 +42,17 @@ class RecordData extends Component {
     }
   }
 
-  onButtonClick = () => {
+  onAddButtonClick = () => {
     this.setState({
       isEditor: true
     });
   };
+
+  onCloseButtonClick = () => {
+    this.setState({
+      isEditor: false
+    });
+  }
 
   render() {
     let elements = [];
@@ -58,8 +63,8 @@ class RecordData extends Component {
     return (
       <div className={styles.RecordData}>
         {elements}
-        {this.state.isEditor ? <Editor/> : null}
-        <button onClick={this.onButtonClick}><i className="fas fa-plus-circle"></i></button>
+        {this.state.isEditor ? <Editor photo={this.props.img} for={this.state.type} onCloseButtonClick={this.onCloseButtonClick}/> : null }
+        <button onClick={this.onAddButtonClick}><i className="fas fa-plus-circle"></i></button>
       </div>
     );
   }

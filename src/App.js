@@ -6,9 +6,9 @@ import styles from './App.module.css';
 class App extends Component {
   state = {
     isFilter: false,
-    filter: 'All'
+    filter: 'All',
   };
-  onDropClickHandler = (event) => {
+  onDropClickHandler = () => {
     this.setState({
       isFilter: !this.state.isFilter
     });
@@ -19,7 +19,6 @@ class App extends Component {
       filter: event.target.innerHTML
     });
   }
-
   render() {
     return (
       <div>
@@ -28,7 +27,8 @@ class App extends Component {
           onFilterClickHandler={this.onFilterClickHandler} 
           onDropClickHandler={this.onDropClickHandler} />
         <div className={styles.Records}>
-          <AllRecords filter={this.state.filter} />
+          <AllRecords 
+            filter={this.state.filter} />
         </div>
       </div>
     );

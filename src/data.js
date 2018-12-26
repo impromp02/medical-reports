@@ -30,7 +30,7 @@ export const records = [
     img: pone,
   },
   {
-    type: "X-Ray",
+    type: "XRay",
     patient: {
       name: "Ramesh Sharma",
       age: 53,
@@ -42,7 +42,7 @@ export const records = [
     img: xone,
   },
   {
-    type: "X-Ray",
+    type: "XRay",
     patient: {
       name: "Ramesh Sharma",
       age: 53,

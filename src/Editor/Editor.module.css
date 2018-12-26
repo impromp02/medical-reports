@@ -1,18 +1,40 @@
 .Editor {
+  font-size: 1rem;
   width: 90vw;
-  height: 80vh;
+  height: 90vh;
   position: fixed;
   z-index: 999;
-  top: 10vh;
+  top: 3vh;
   left: 3vw;
   padding: 1rem;
-  background-color: rgba(41, 129, 187, 0.8);
+  background-color: rgba(17, 57, 83, 0.8);
+  overflow: scroll;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid grey;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
+
 
 .Form {
   width: calc(50% - 2rem);
   min-height: 100%; 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  background-color: white;
+}
+
+.Form div {
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.CloseBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0;
+  background-color: none !important;
+  border-radius: 50%;
 }

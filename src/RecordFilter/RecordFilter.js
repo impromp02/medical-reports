@@ -7,7 +7,7 @@ const RecordFilter = (props) => (
       <li onClick={props.onClickHandler}>All</li>
       <li onClick={props.onClickHandler}>Prescription</li>
       <li onClick={props.onClickHandler}>MRI</li>
-      <li onClick={props.onClickHandler}>X-Ray</li>
+      <li onClick={props.onClickHandler}>XRay</li>
       <li onClick={props.onClickHandler}>Blood Report</li>
       <li onClick={props.onClickHandler}>USG</li>
     </ul>
