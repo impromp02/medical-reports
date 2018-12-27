@@ -1,5 +1,4 @@
 .Header {
-  width: 100vw;
   min-height: calc(80px + 1vh);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
   text-align: center;

@@ -30,7 +30,7 @@ class RecordData extends Component {
   onBlurHandler = (event) => {
     let fieldVal = event.target.innerHTML;
     let fieldId = event.target.getAttribute('ident');
-
+    console.log(fieldId, fieldVal)
     if(fieldId === "problem") {
       this.setState({
         [fieldId]: [...this.state.problem, fieldVal]
@@ -57,6 +57,7 @@ class RecordData extends Component {
   render() {
     let elements = [];
     for(let prop in this.state) {
+      if(prop === "isEditor") continue;
       elements.push(<Span key={prop} field={prop} value={this.state[prop]} onBlurHandler={this.onBlurHandler}/>);
     }
 

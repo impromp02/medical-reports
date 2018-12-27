@@ -17,15 +17,15 @@
 
 
 .Form {
+  padding: 0.5rem;
   width: calc(50% - 2rem);
-  min-height: 100%; 
   display: flex;
   flex-direction: column;
   background-color: white;
 }
 
 .Form div {
-  margin: 1rem auto;
+  margin: .5rem auto;
   display: flex;
   flex-direction: column;
 }

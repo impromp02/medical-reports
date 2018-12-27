@@ -15,7 +15,7 @@ const Span = (props) => (
   <div className={styles.SpanContainer}>
     <span className={styles.Span}><i className={icon[props.field]}></i></span>
     <span
-      ident={props.field} 
+      ident={props.value} 
       className={`${styles.Span} ${styles[props.field]}`} 
       contentEditable
       suppressContentEditableWarning="true"

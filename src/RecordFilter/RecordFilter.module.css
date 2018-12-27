@@ -18,4 +18,19 @@
   color: white;
   margin: 0 0.5rem;
   border-radius: 50px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .RecordFilter {
+    height: fit-content;
+  }
+
+  .RecordFilter ul {
+    flex-direction: column;
+  }
+  .RecordFilter ul li {
+    flex: 0 1 auto;
+    margin: 0.2rem 0;
+  }
 }
